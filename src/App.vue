@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
 
+    <toggle></toggle>
     <skills></skills>
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -9,14 +10,14 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Toggle from './components/Toggle.vue'
 import Skills from './components/Skills.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    Skills
+    Skills,
+    Toggle
   }
 }
 </script>
