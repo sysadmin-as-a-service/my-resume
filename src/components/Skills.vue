@@ -211,7 +211,7 @@ export default {
     name: 'skills',
     computed: {
         skillsList() {
-            return store.state.skillsList
+            return store.state.skillsArray.name
         }
     }
 }

@@ -28,14 +28,10 @@ export default {
     },
     methods: {
         toggleSkill(skill) {
-            if(store.state.skillsList.includes(skill)){
-                store.removeSkill(skill)
-            }else{
-                store.addSkill(skill)
-            }
+            store.toggleSkill(skill)
         },
         isSkillActive(skill) {
-            if(store.state.skillsList.includes(skill)){
+            if(store.state.skillsArray.find(x => x.name === skill).active){
                 return "skill-button-active"
             }else{
                 return "skill-button-inactive"
@@ -64,7 +60,7 @@ export default {
 
 .skill-button-active:hover, .skill-button-inactive:hover {
     color: rgb(150, 150, 150);
-    text-shadow: 0px 0px 3px;
+    text-shadow: 0px 0px 2px;
 }
 
 .skill-button-inactive {

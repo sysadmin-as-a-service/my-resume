@@ -25,7 +25,7 @@ export default {
 
 <style>
 body {
-  background: #323232;
+  background: #202020;
 }
 
 #app {
