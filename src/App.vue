@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <Header></Header>
+    <Hero></Hero>
     <Toggle></Toggle>
     <Skills></Skills>
 
@@ -11,21 +11,28 @@
 <script>
 import Toggle from './components/Toggle.vue'
 import Skills from './components/Skills.vue'
-import Header from './components/Header.vue'
+import Hero from './components/Hero.vue'
 
 export default {
   name: 'App',
   components: {
     Skills,
     Toggle,
-    Header
+    Hero
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+* {
+  font-family: 'Dosis', sans-serif;
+}
+
 body {
   background: #202020;
+  
 }
 
 #app {

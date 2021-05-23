@@ -1,32 +1,34 @@
 <template>
     <div class="skills">
 
-        <transition name="fade">
-            <div class="skills-box" v-if="skillsList.includes('data')">
+        <transition name="fade">            
+            <div class="skills-box" v-if="skillsList.includes('automation')">
                 <div class="skills-header">
-                    data
+                    automation
                 </div>
                 <div class="skills-about">
-                    I've worked primarily with MS SQL Server and PowerBI, and have experience building ETL processes.
-                    Some of my significant projects have been:
+                    Working mostly on Windows servers and desktops, PowerShell is my go-to scripting language. 
+                    Some of the things I've scripted/automated are:
                     <ul>
-                        <li> Creating reports in PowerBI to analyse our ticketing system data on a macro and individual level </li>
-                        <li>Writing ETL scripts to copy data from our ticketing system REST API and store it in a SQL database for easier reporting</li>
-                        <li> Writing ETL scripts to sync our Trello task lists and store in a SQL database </li>
+                        <li>Scripted the provisioning and weekly update of Citrix VMs in PowerShell</li>
+                        <li>Built New Server request form that automatically submits change requests to relevant teams, in Salesforce</li>
+                        <li>Used Zapier to collect email alerts from our monitoring system, parse the email and collate with information from a CMDB, then create/update tickets in a ticketing system</li>
+                        <li>Created a series of Logic Apps and used Azure API Management, to create a simple REST API for a CMDB</li>
+                        <li>Built a PowerShell module for working with a corporate timesheet tracking system</li>
+                        <li>Created user provisioning scripts</li>
+                        <li>Built Power Automate/Flows to automate daily tasks like creating tasks from emails or meeting notes</li>
                     </ul>
                 </div>
                 <div class="skills-list">
-                Specific skills:
+                    Specific skills:
                 <ul>
-                    <li> Microsoft SQL Server </li>
-                    <li> PowerBI </li>
-                    <li> Data transformation, ETL </li>
+                    <li>Scripting languages - PowerShell, Python</li>
+                    <li>Low code tools - Zapier, Power Automate/Flow, Logic Apps, Salesforce Flow</li>
+                    <li>Working with REST APIs</li>
                 </ul>
                 </div>
-                
             </div>
         </transition>
-        
 
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('development')">
@@ -60,69 +62,7 @@
             
             </div>
         </transition>
-        <transition name="fade">
-            <div class="skills-box" v-if="skillsList.includes('euc')">
-                <div class="skills-header">
-                    end user computing
-                </div>
-                <div class="skills-about">
-                    I have architected, implemented and maintained End User Computing systems (primarily Citrix and RDS) for > 2,500 users.
-                    I've worked with Windows Server and related technologies for many years.
-                </div>
-                <div class="skills-list">
-                    Specific skills:
-                    <ul>
-                        <li>Citrix/RDS/Terminal Servers</li>
-                        <li>Application delivery - App-V, Published Apps</li>
-                        <li>Application troubleshooting - procmon, procexp, Wireshark, Fiddler
-                        <li>Group Policy</li>
-                        <li>Intune</li>
-                        <li>Windows File Server, DFS</li>
-                    </ul>
-                </div>
-            
-            </div>
-        </transition>
-        <transition name="fade">
-            <div class="skills-box" v-if="skillsList.includes('identity')">
-                <div class="skills-header">
-                    identity
-                </div>
-                <div class="skills-about">
-                    I've worked with Active Directory, ADFS, Azure AD Connect, and other Microsoft identity solutions.
-                    I'm comfortable setting up & configuring domains, Active Directory Federation Services (ADFS), and connecting SAML identity providers and services together.                   
-                </div>
-                <div class="skills-list">
-                    Specific skills:
-                    <ul>
-                        <li>Active Directory - Design & maintenance</li>
-                        <li>Active Directory Federation Services</li>
-                        <li>Azure AD Connect</li>
-                        <li>SAML</li>
-                    </ul>
-                </div>
-            </div>
-        </transition>
 
-        <transition name="fade">
-            <div class="skills-box" v-if="skillsList.includes('leadership')">
-                <div class="skills-header">
-                    leadership
-                </div>
-                <div class="skills-about">
-                    I've lead small teams, and have been involved in the full cycle of employee management - hiring, day to day management, goal setting, coaching, and reviews.
-                    I enjoy training others and helping them overcome obstacles.
-                </div>
-                <div class="skills-list">
-                    Specific skills:
-                    <ul>
-                        <li>Team management & scheduling</li>
-                        <li>Goal setting</li>
-                        <li>Coaching</li>
-                    </ul>
-                </div>
-            </div>
-        </transition>
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('cloud')">
                 <div class="skills-header">
@@ -151,33 +91,76 @@
                     </ul>
                 </div>
             </div>
-        </transition>
-        <transition name="fade">            
-            <div class="skills-box" v-if="skillsList.includes('automation')">
+        </transition>        
+
+        <transition name="fade">
+            <div class="skills-box" v-if="skillsList.includes('euc')">
                 <div class="skills-header">
-                    automation
+                    end user computing
                 </div>
                 <div class="skills-about">
-                    Working mostly on Windows servers and desktops, PowerShell is my go-to scripting language. 
-                    Some of the things I've scripted/automated are:
-                    <ul>
-                        <li>Scripted the provisioning and weekly update of Citrix VMs in PowerShell</li>
-                        <li>Built New Server request form that automatically submits change requests to relevant teams, in Salesforce</li>
-                        <li>Used Zapier to collect email alerts from our monitoring system, parse the email and collate with information from a CMDB, then create/update tickets in a ticketing system</li>
-                        <li>Created a series of Logic Apps and used Azure API Management, to create a simple REST API for a CMDB</li>
-                        <li>Built a PowerShell module for working with a corporate timesheet tracking system</li>
-                        <li>Created user provisioning scripts</li>
-                        <li>Built Power Automate/Flows to automate daily tasks like creating tasks from emails or meeting notes</li>
-                    </ul>
+                    I have architected, implemented and maintained End User Computing systems (primarily Citrix and RDS) for > 2,500 users.
+                    I've worked with Windows Server and related technologies for many years.
                 </div>
                 <div class="skills-list">
                     Specific skills:
+                    <ul>
+                        <li>Citrix/RDS/Terminal Servers</li>
+                        <li>Application delivery - App-V, Published Apps</li>
+                        <li>Application troubleshooting - procmon, procexp, Wireshark, Fiddler
+                        <li>Group Policy</li>
+                        <li>Intune</li>
+                        <li>Windows File Server, DFS</li>
+                    </ul>
+                </div>
+            
+            </div>
+        </transition>
+
+        <transition name="fade">
+            <div class="skills-box" v-if="skillsList.includes('identity')">
+                <div class="skills-header">
+                    identity
+                </div>
+                <div class="skills-about">
+                    I've worked with Active Directory, ADFS, Azure AD Connect, and other Microsoft identity solutions.
+                    I'm comfortable setting up & configuring domains, Active Directory Federation Services (ADFS), and connecting SAML identity providers and services together.                   
+                </div>
+                <div class="skills-list">
+                    Specific skills:
+                    <ul>
+                        <li>Active Directory - Design & maintenance</li>
+                        <li>Active Directory Federation Services</li>
+                        <li>Azure AD Connect</li>
+                        <li>SAML</li>
+                    </ul>
+                </div>
+            </div>
+        </transition>
+
+        <transition name="fade">
+            <div class="skills-box" v-if="skillsList.includes('data')">
+                <div class="skills-header">
+                    data
+                </div>
+                <div class="skills-about">
+                    I've worked primarily with MS SQL Server and PowerBI, and have experience building ETL processes.
+                    Some of my significant projects have been:
+                    <ul>
+                        <li> Creating reports in PowerBI to analyse our ticketing system data on a macro and individual level </li>
+                        <li>Writing ETL scripts to copy data from our ticketing system REST API and store it in a SQL database for easier reporting</li>
+                        <li> Writing ETL scripts to sync our Trello task lists and store in a SQL database </li>
+                    </ul>
+                </div>
+                <div class="skills-list">
+                Specific skills:
                 <ul>
-                    <li>Scripting languages - PowerShell, Python</li>
-                    <li>Low code tools - Zapier, Power Automate/Flow, Logic Apps, Salesforce Flow</li>
-                    <li>Working with REST APIs</li>
+                    <li> Microsoft SQL Server </li>
+                    <li> PowerBI </li>
+                    <li> Data transformation, ETL </li>
                 </ul>
                 </div>
+                
             </div>
         </transition>
 
@@ -201,6 +184,27 @@
                 </div>
             </div>               
         </transition>
+
+        <transition name="fade">
+            <div class="skills-box" v-if="skillsList.includes('leadership')">
+                <div class="skills-header">
+                    leadership
+                </div>
+                <div class="skills-about">
+                    I've lead small teams, and have been involved in the full cycle of employee management - hiring, day to day management, goal setting, coaching, and reviews.
+                    I enjoy training others and helping them overcome obstacles.
+                </div>
+                <div class="skills-list">
+                    Specific skills:
+                    <ul>
+                        <li>Team management & scheduling</li>
+                        <li>Goal setting</li>
+                        <li>Coaching</li>
+                    </ul>
+                </div>
+            </div>
+        </transition>
+
     </div>
 </template>
 
@@ -211,7 +215,8 @@ export default {
     name: 'skills',
     computed: {
         skillsList() {
-            return store.state.skillsArray.name
+            var activeSkills = store.state.skillsArray.filter(x => x.active == true)
+            return activeSkills.map(x => x.name)
         }
     }
 }
@@ -219,17 +224,17 @@ export default {
 
 <style>
 
+
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));    
     padding: 2em;
     color: rgb(230, 230, 230);
+    font-size: 1.5em;
 
 }
 
 .skills-box {
-    border: 2px solid #999999;
-    border-radius: 5px;
     padding: 0.8em;
     text-align: left;
 

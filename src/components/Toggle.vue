@@ -23,7 +23,7 @@ export default {
         return {
             // do this in data instead of computed so its not responsive i.e. buttons
             // don't disappear when we click them...
-            skillsList: store.state.skillsList
+            skillsList: store.state.skillsArray.map(x => x.name)
         }
     },
     methods: {
@@ -47,7 +47,7 @@ export default {
 
 <style>
 .skill-toggle {
-    display: inline
+    display: inline;
 }
 
 .skill-button-active {
