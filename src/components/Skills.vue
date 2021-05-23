@@ -3,6 +3,9 @@
 
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('data')">
+                <div class="skills-header">
+                    data
+                </div>
                 <div class="skills-about">
                     I've worked primarily with MS SQL Server and PowerBI, and have experience building ETL processes.
                     Some of my significant projects have been:
@@ -27,6 +30,9 @@
 
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('development')">
+                <div class="skills-header">
+                    development
+                </div>
                 <div class="skills-about">
                     I enjoy building things! I've scripted lots of tasks in my career (see "automation" section), and have some experience developing web apps and other tools for internal use.
                     I've built a number of smaller projects using HTML, CSS and JavaScript (Vue.js), such as:
@@ -56,6 +62,9 @@
         </transition>
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('euc')">
+                <div class="skills-header">
+                    end user computing
+                </div>
                 <div class="skills-about">
                     I have architected, implemented and maintained End User Computing systems (primarily Citrix and RDS) for > 2,500 users.
                     I've worked with Windows Server and related technologies for many years.
@@ -76,6 +85,9 @@
         </transition>
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('identity')">
+                <div class="skills-header">
+                    identity
+                </div>
                 <div class="skills-about">
                     I've worked with Active Directory, ADFS, Azure AD Connect, and other Microsoft identity solutions.
                     I'm comfortable setting up & configuring domains, Active Directory Federation Services (ADFS), and connecting SAML identity providers and services together.                   
@@ -94,6 +106,9 @@
 
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('leadership')">
+                <div class="skills-header">
+                    leadership
+                </div>
                 <div class="skills-about">
                     I've lead small teams, and have been involved in the full cycle of employee management - hiring, day to day management, goal setting, coaching, and reviews.
                     I enjoy training others and helping them overcome obstacles.
@@ -110,6 +125,9 @@
         </transition>
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('cloud')">
+                <div class="skills-header">
+                    cloud
+                </div>
                 <div class="skills-about">
                     I've worked primarily with Microsoft Hyper-V and System Center products (i.e. VMM) in private cloud scenarios, and am familiar with VMware vSphere.
                     On the public cloud side, I've deployed a wide range of services in Microsoft Azure and Office 365.
@@ -136,6 +154,9 @@
         </transition>
         <transition name="fade">            
             <div class="skills-box" v-if="skillsList.includes('automation')">
+                <div class="skills-header">
+                    automation
+                </div>
                 <div class="skills-about">
                     Working mostly on Windows servers and desktops, PowerShell is my go-to scripting language. 
                     Some of the things I've scripted/automated are:
@@ -162,6 +183,9 @@
 
         <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('networking')">
+                <div class="skills-header">
+                    networking
+                </div>
                 <div class="skills-about">
                     I'm comfortable configuring Citrix NetScalers for load balancing & GSLB setup, and have experience using WebMarshal proxies. 
                     I can troubleshoot network related issues using tools like Fiddler, Wireshark, netstat, curl, and... ping.
@@ -197,7 +221,9 @@ export default {
 
 .skills {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));    
+    padding: 2em;
+    color: rgb(230, 230, 230);
 
 }
 
@@ -207,6 +233,17 @@ export default {
     padding: 0.8em;
     text-align: left;
 
+}
+
+.skills-list {
+    padding-top: 1em;
+}
+
+.skills-header {
+    font-size: 2em;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 0.5em;
 }
 
 li {
@@ -221,7 +258,7 @@ li {
   transition: opacity 0.2s;
 }
 
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
