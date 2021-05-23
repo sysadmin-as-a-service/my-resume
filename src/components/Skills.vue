@@ -78,6 +78,7 @@
 
                 </div>
                 <div class="skills-list">
+                    Specific skills:
                     <ul>
                         <li>Microsoft Hyper-V</li>
                         <li>System Center (Virtual Machine Manager)</li>
@@ -227,7 +228,7 @@ export default {
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));    
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));    
     padding: 2em;
     color: rgb(230, 230, 230);
     font-size: 1.5em;
