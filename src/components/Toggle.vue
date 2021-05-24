@@ -2,12 +2,14 @@
 <div>
 
     <div class="skill-toggle" v-for="skill in skillsList" :key="skill">
+    
         <button 
-        @click="toggleSkill(skill)"
-        @mouseover="setSelectedSkill(skill)"
-        @mouseleave="setSelectedSkill(null)"
-        :class="isSkillActive(skill)"
+            @click="toggleSkill(skill);setSelectedSkill(skill)"
+            @mouseover="setSelectedSkill(skill)"
+            @mouseleave="setSelectedSkill(null)"
+            :class="isSkillActive(skill)"
         >{{ skill }}</button>
+    
     </div>
     
 </div>
@@ -47,7 +49,7 @@ export default {
 
 <style>
 .skill-toggle {
-    display: inline;
+    display: inline-block;
 }
 
 .skill-button-active {
@@ -70,7 +72,5 @@ export default {
     color: rgb(100, 100, 100);
     font-size: 2em;
 }
-
-
 
 </style>

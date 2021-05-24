@@ -4,15 +4,18 @@
             Hi, I'm Matt.
         </div>
 
-        <div class="hero-tagline">
-            {{ tagLine }}
-        </div>
-
-        <transition  name="fade">
-            <div class="hero-hint" v-show="needsAHint">
-                (click some of the headers below)
+            <div class="hero-tagline" :key="tagLine">
+                {{ tagLine }}
             </div>
-        </transition>
+
+            <div class="hero-hint-box">
+                <transition  name="fade">
+                    <div class="hero-hint-text" v-if="needsAHint">
+                        (click some of the headers below)
+                    </div>
+                </transition>
+            </div>
+        
 
     </div>
 </template>
@@ -22,12 +25,17 @@ import { store } from '../store/store.js'
 
 export default {
     name:'hero',
+    data() {
+        return {
+            skillsArray: store.state.skillsArray
+        }
+    },
     computed: {
         tagLine() {
             if(store.state.selectedSkill !== null){
                 return store.state.selectedSkill.tag
             }else{
-                return "I'm interested in working with you"
+                return "I'm interested in working with you."
             }
             
         },
@@ -59,16 +67,20 @@ export default {
 }
 
 .hero-tagline {
-    font-size: 4em;
+    font-size: 5vh;
     color: rgb(230, 230, 230);
     padding: 0.5em;
+    height:4em;
 }
 
-.hero-hint {
+.hero-hint-box {
+    height:1.2em;
+}
+
+.hero-hint-text {
     font-size: 1.2em;
     padding: 0.4em 0;
     color: rgb(230, 230, 230);
-
 }
 
 .fade-enter-active {
