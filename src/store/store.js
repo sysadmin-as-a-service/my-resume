@@ -19,6 +19,11 @@ export const store = Vue.observable({
           tag: "I'm a cloud engineer"
         },
         {
+          name: 'monitoring',
+          active: false,
+          tag: "Quis custodiet ipsos custodes?"
+        },
+        {
           name: 'euc',
           active: false,
           tag: "I'm an end user computing specialist"

@@ -95,6 +95,37 @@
         </transition>        
 
         <transition name="fade">
+            <div class="skills-box" v-if="skillsList.includes('monitoring')">
+                <div class="skills-header">
+                    monitoring
+                </div>
+                <div class="skills-about">
+                    I have been a part of on-call teams for many years, so I know the value of a well-monitored estate. I've worked with legacy monitoring systems such as Nagios and CheckMK,
+                    as well as more modern stacks like Elasticsearch, Logsearch and Kibana (ELK), Zabbix and Pager Duty.
+
+                    Some of the memorable monitoring projects I've completed:
+                    <ul>
+                        <li>Rolling out Event Log forwarding to ELK to improve visibility across disparate EUC platforms</li>
+                        <li>Moving our after hours monitoring from a manned service to Pager Duty</li>
+                        <li>Syncing monitoring events with ticketing system</li>
+                    </ul>
+
+                </div>
+                <div class="skills-list">
+                    Specific skills:
+                    <ul>
+                        <li>Nagios</li>
+                        <li>CheckMK</li>
+                        <li>Zabbix</li>
+                        <li>Pager Duty</li>
+                        <li>ELK stack</li>
+                    </ul>
+                </div>
+            </div>
+        </transition>        
+
+
+        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('euc')">
                 <div class="skills-header">
                     end user computing
@@ -228,7 +259,7 @@ export default {
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    
     padding: 2em;
     color: rgb(230, 230, 230);
     font-size: 1.5em;
