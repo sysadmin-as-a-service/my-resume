@@ -10,7 +10,7 @@
                     Working mostly on Windows servers and desktops, PowerShell is my go-to scripting language. 
                     Some of the things I've scripted/automated are:
                     <ul>
-                        <li>Scripted the provisioning and weekly update of Citrix VMs in PowerShell</li>
+                        <li>Scripted the provisioning and weekly update of Citrix VMs in PowerShell. <a href="https://github.com/sysadmin-as-a-service/citrix-scripts" target="_blank">(view on Github)</a></li>
                         <li>Built New Server request form that automatically submits change requests to relevant teams, in Salesforce</li>
                         <li>Used Zapier to collect email alerts from our monitoring system, parse the email and collate with information from a CMDB, then create/update tickets in a ticketing system</li>
                         <li>Created a series of Logic Apps and used Azure API Management, to create a simple REST API for a CMDB</li>
@@ -37,15 +37,16 @@
                 </div>
                 <div class="skills-about">
                     I enjoy building things! I've scripted lots of tasks in my career (see "automation" section), and have some experience developing web apps and other tools for internal use.
+                    <br/><br/>
                     I've built a number of smaller projects using HTML, CSS and JavaScript (Vue.js), such as:
                     <ul>
                         <li>a tool to visualise racks in a datacenter, linked to a custom asset database</li>
                         <li>an addon for our ticketing system, to remind staff to add in billable time & set fields correctly</li>
                         <li>a website for a makeup artist</li>
-                        <li>my own personal blog</li>
-                        <li>this resume</li>
+                        <li>my own personal blog <a href="https://github.com/sysadmin-as-a-service/sysadmin-blog" target="_blank">(view on Github)</a></li>
+                        <li>this resume <a href="https://github.com/sysadmin-as-a-service/my-resume" target="_blank">(view on Github)</a></li>
                     </ul>
-                    I have also worked on ASP.NET Web Apps (ported a client reporting portal from ASP.NET to .NET Core), and built rating app for a homebrew competition, on ASP.NET Core & Razor Pages.
+                    I have also worked on ASP.NET Web Apps (ported a client reporting portal from ASP.NET to .NET Core), and <a href="https://github.com/sysadmin-as-a-service/brewcomp" target="_blank">built rating app for a homebrew competition</a>, on ASP.NET Core & Razor Pages.
                     I have become familiar with Git, and building simple CI/CD pipelines in a variety of build systems.
                 </div>
                 <div class="skills-list">
@@ -69,12 +70,14 @@
                     cloud
                 </div>
                 <div class="skills-about">
-                    I've worked primarily with Microsoft Hyper-V and System Center products (i.e. VMM) in private cloud scenarios, and am familiar with VMware vSphere.
+                    I've worked primarily with Microsoft Hyper-V and System Center products (i.e. VMM) in private cloud scenarios, and am familiar with VMware vSphere.<br/>
                     On the public cloud side, I've deployed a wide range of services in Microsoft Azure and Office 365.
-
+                    <p>
                     One of my recent projects was using Azure API Management & Logic Apps to develop a simplified REST API, for a custom configuration management database (CMDB).
-
+                    </p>
+                    <p>
                     I've also been involved in the migration and ongoing management of numerous Office 365 configurations, using Exchange Online, SharePoint Online and OneDrive.
+                    </p>
 
                 </div>
                 <div class="skills-list">
@@ -100,8 +103,11 @@
                     monitoring
                 </div>
                 <div class="skills-about">
-                    I have been a part of on-call teams for many years, so I know the value of a well-monitored estate. I've worked with legacy monitoring systems such as Nagios and CheckMK,
+                    I have been a part of on-call teams for many years, so I know the value of a well-monitored estate. 
+                    <p>
+                        I've worked with legacy monitoring systems such as Nagios and CheckMK,
                     as well as more modern stacks like Elasticsearch, Logsearch and Kibana (ELK), Zabbix and Pager Duty.
+                    </p>
 
                     Some of the memorable monitoring projects I've completed:
                     <ul>
@@ -179,9 +185,9 @@
                     I've worked primarily with MS SQL Server and PowerBI, and have experience building ETL processes.
                     Some of my significant projects have been:
                     <ul>
-                        <li> Creating reports in PowerBI to analyse our ticketing system data on a macro and individual level </li>
+                        <li>Creating reports in PowerBI to analyse our ticketing system data on a macro and individual level </li>
                         <li>Writing ETL scripts to copy data from our ticketing system REST API and store it in a SQL database for easier reporting</li>
-                        <li> Writing ETL scripts to sync our Trello task lists and store in a SQL database </li>
+                        <li>Writing ETL scripts to sync our Trello task lists and store in a SQL database </li>
                     </ul>
                 </div>
                 <div class="skills-list">
