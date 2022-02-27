@@ -61,8 +61,8 @@ export default {
 }
 
 .skill-button-active:hover, .skill-button-inactive:hover {
-    color: rgb(150, 150, 150);
-    text-shadow: 0px 0px 2px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 0.5px;
 }
 
 .skill-button-inactive {

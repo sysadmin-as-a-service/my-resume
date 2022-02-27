@@ -1,7 +1,6 @@
 <template>
     <div class="skills">
 
-        <transition name="fade">            
             <div class="skills-box" v-if="skillsList.includes('automation')">
                 <div class="skills-header">
                     automation
@@ -10,8 +9,10 @@
                     Working mostly on Windows servers and desktops, PowerShell is my go-to scripting language. 
                     Some of the things I've scripted/automated are:
                     <ul>
+                        
+                        <li>Automated the invoice & crediting of user changes in a large multi tenanted Exchange platform.</li>
                         <li>Scripted the provisioning and weekly update of Citrix VMs in PowerShell. <a href="https://github.com/sysadmin-as-a-service/citrix-scripts" target="_blank">(view on Github)</a></li>
-                        <li>Built New Server request form that automatically submits change requests to relevant teams, in Salesforce</li>
+                        <li>Built New Server request form in Salesforce submits change requests to relevant teams, then builds it in VMM.</li>
                         <li>Used Zapier to collect email alerts from our monitoring system, parse the email and collate with information from a CMDB, then create/update tickets in a ticketing system</li>
                         <li>Created a series of Logic Apps and used Azure API Management, to create a simple REST API for a CMDB</li>
                         <li>Built a PowerShell module for working with a corporate timesheet tracking system</li>
@@ -28,9 +29,7 @@
                 </ul>
                 </div>
             </div>
-        </transition>
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('development')">
                 <div class="skills-header">
                     development
@@ -62,16 +61,14 @@
                 </div>
             
             </div>
-        </transition>
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('cloud')">
                 <div class="skills-header">
                     cloud
                 </div>
                 <div class="skills-about">
                     I've worked primarily with Microsoft Hyper-V and System Center products (i.e. VMM) in private cloud scenarios, and am familiar with VMware vSphere.<br/>
-                    On the public cloud side, I've deployed a wide range of services in Microsoft Azure and Office 365.
+                    On the public cloud side, I've deployed a wide range of services in Microsoft Azure and Office 365. I architected a solution for multiple Office 365 tenant connections, to one large multi-tenanted Active Directory domain. 
                     <p>
                     One of my recent projects was using Azure API Management & Logic Apps to develop a simplified REST API, for a custom configuration management database (CMDB).
                     </p>
@@ -83,21 +80,20 @@
                 <div class="skills-list">
                     Specific skills:
                     <ul>
-                        <li>Microsoft Hyper-V</li>
-                        <li>System Center (Virtual Machine Manager)</li>
                         <li>Azure IaaS</li>
                         <li>Azure SQL (PaaS and IaaS)</li>
                         <li>Azure Web Apps (both App Service and Static Web Apps)</li>
                         <li>Azure Logic Apps</li>
                         <li>Azure API Management</li>
+                        <li>Azure AD Connect</li>
+                        <li>Microsoft Hyper-V</li>
+                        <li>System Center (Virtual Machine Manager)</li>
                         <li>Office 365 - Exchange Online & Hybrid Exchange</li>
                         <li>Office 365 - SharePoint Online/OneDrive</li>
                     </ul>
                 </div>
             </div>
-        </transition>        
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('monitoring')">
                 <div class="skills-header">
                     monitoring
@@ -128,10 +124,8 @@
                     </ul>
                 </div>
             </div>
-        </transition>        
 
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('euc')">
                 <div class="skills-header">
                     end user computing
@@ -153,16 +147,15 @@
                 </div>
             
             </div>
-        </transition>
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('identity')">
                 <div class="skills-header">
                     identity
                 </div>
                 <div class="skills-about">
-                    I've worked with Active Directory, ADFS, Azure AD Connect, and other Microsoft identity solutions.
-                    I'm comfortable setting up & configuring domains, Active Directory Federation Services (ADFS), and connecting SAML identity providers and services together.                   
+                    I've worked with Active Directory, Azure MFA (NPS), ADFS, Azure AD Connect, and NetScaler identity solutions.
+                    I've configured multi-tenant NetScaler Gateways with differening MFA requirements by AD group or client.
+                    I'm comfortable setting up & configuring domains, Active Directory Federation Services (ADFS), and connecting SAML identity providers and services together.
                 </div>
                 <div class="skills-list">
                     Specific skills:
@@ -170,13 +163,13 @@
                         <li>Active Directory - Design & maintenance</li>
                         <li>Active Directory Federation Services</li>
                         <li>Azure AD Connect</li>
+                        <li>Azure MFA</li>
                         <li>SAML</li>
+                        <li>NetScaler</li>
                     </ul>
                 </div>
             </div>
-        </transition>
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('data')">
                 <div class="skills-header">
                     data
@@ -186,8 +179,8 @@
                     Some of my significant projects have been:
                     <ul>
                         <li>Creating reports in PowerBI to analyse our ticketing system data on a macro and individual level </li>
+                        <li>Writing ETL scripts to extract data from 3CX phone system, and import into PowerBI for improved reporting</li>
                         <li>Writing ETL scripts to copy data from our ticketing system REST API and store it in a SQL database for easier reporting</li>
-                        <li>Writing ETL scripts to sync our Trello task lists and store in a SQL database </li>
                     </ul>
                 </div>
                 <div class="skills-list">
@@ -200,9 +193,7 @@
                 </div>
                 
             </div>
-        </transition>
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('networking')">
                 <div class="skills-header">
                     networking
@@ -221,9 +212,7 @@
                 </ul>
                 </div>
             </div>               
-        </transition>
 
-        <transition name="fade">
             <div class="skills-box" v-if="skillsList.includes('leadership')">
                 <div class="skills-header">
                     leadership
@@ -241,7 +230,6 @@
                     </ul>
                 </div>
             </div>
-        </transition>
 
     </div>
 </template>

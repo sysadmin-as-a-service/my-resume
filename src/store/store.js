@@ -16,7 +16,7 @@ export const store = Vue.observable({
         {
           name: 'cloud',
           active: false,
-          tag: "I'm a cloud engineer"
+          tag: "I've worked in public, private and hybrid clouds"
         },
         {
           name: 'monitoring',
@@ -53,9 +53,14 @@ export const store = Vue.observable({
       needsAHint: false
     },
     toggleSkill: function(skill) {
-      var storeSkill = this.state.skillsArray.find(x => x.name === skill)
-      console.log("toggleSkill: found skill - " + storeSkill.name)
-      storeSkill.active = !storeSkill.active
+
+      this.state.skillsArray.map(x => {
+        if(x.name === skill){
+          x.active = true
+        }else{
+          x.active = false
+        }
+      })
       
     },
     setSelectedSkill: function (skill) {
